@@ -7,8 +7,8 @@ import ChatMessage from './ChatMessage.jsx';
 const ChatRoom = () => {
     const dummy = useRef();
     const messagesRef = firestore.collection('messages');
-    const query = messagesRef.orderBy('createdAt').limit(25);
-  
+    const query = messagesRef.orderBy('createdAt').limit(50);
+    //! real time change that cause rerender 
     const [messages] = useCollectionData(query, { idField: 'id' });
   
     const [formValue, setFormValue] = useState('');

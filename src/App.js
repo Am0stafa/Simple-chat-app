@@ -8,8 +8,6 @@ import SignOut from './components/SignOut';
 import SignIn from './components/SignIn';
 import ChatRoom from './components/ChatRoom';
 
-
-
 function App() {
 
   const [user] = useAuthState(auth);
