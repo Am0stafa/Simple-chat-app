@@ -1,34 +1,39 @@
-import React from 'react'
-
-import {auth} from './firebase/config';
-
-import SignIn from './SignIn';
+import React, { useRef, useState } from 'react';
 import './App.css';
-import ChatRoom from './ChatRoom';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { auth } from './firebase/config.js'
+import SignOut from './components/SignOut';
+import SignIn from './components/SignIn';
+import ChatRoom from './components/ChatRoom';
+
+
 
 function App() {
 
+  const [user] = useAuthState(auth);
 
   return (
-  <div className="App">
-    <header>
-      <h1>⚛️🔥💬</h1>
-      <SignOut />
-    </header>
-    
-    <section>
-      {auth.currentUser ? <ChatRoom /> : <ChatRoom />}
-    
-    </section>
-  </div>
+    <div className="App">
+      <header>
+        <h1>⚛️🔥💬</h1>
+        <SignOut />
+      </header>
+
+      <section>
+        {user ? <ChatRoom /> : <SignIn />}
+      </section>
+
+    </div>
   );
-  
-  
-  function SignOut() {
-    return auth.currentUser && (
-      <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
-    )
-  }
 }
+
+
+
+
+
+
+
 
 export default App;
