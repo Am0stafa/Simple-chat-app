@@ -82,6 +82,54 @@ input {
   padding: 0 10px;
 }
 
+.key {
+  line-height: 2.5;
+  width: 9%;
+  font-size: 1.5rem;
+  background: rgb(45 42 42);
+  color: #efc9c9;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+}
+.key2 {
+  line-height: 2.5;
+  width: 9%;
+  font-size: 1.5rem;
+  background: rgb(45 42 42);
+  color: #efc9c9;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+  position: absolute;
+  left: 81px;
+}
+.key3 {
+  line-height: 2.5;
+  width: 9%;
+  font-size: 1.5rem;
+  background: rgb(45 42 42);
+  color: #efc9c9;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+  position: absolute;
+  left: 155px;
+}
+.key4 {
+  line-height: 2.5;
+  width: 9%;
+  font-size: 1.5rem;
+  background: rgb(45 42 42);
+  color: #efc9c9;
+  outline: none;
+  border: none;
+  padding: 0px 10px;
+  position: absolute;
+  left: 225px;
+}
+
+
 button {
   background-color: #282c34; /* Green */
   border: none;
@@ -106,7 +154,9 @@ button:disabled {
   max-width: 400px;
   margin: 0 auto;
 }
-
+.sign-out {
+  padding: 14px 0px;
+}
 
 
 
@@ -116,7 +166,7 @@ ul, li {
 }
 
 p {
-  max-width: 782px;
+  max-width: 500px;
   margin-bottom: 12px;
   line-height: 24px;
   padding: 10px 20px;
